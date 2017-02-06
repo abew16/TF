@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+
+plt.figure(figsize=(5,10))
+
+plt.subplot(2, 1, 1)
+guns = pd.read_csv('guns.csv')
+guns_by_month = guns.groupby('month').count()
+guns_by_month['age'].plot(kind='bar')
+
+plt.subplot(2, 1, 2)
+guns_by_sex = guns.groupby('sex').count()
+plt.pie(guns_by_sex['age'])
+plt.show()
