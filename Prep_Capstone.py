@@ -46,3 +46,12 @@ for col in df.columns:
     if col == 'Education':
         unique_values = sorted(df[col].unique())
         print('Education : {}').format(unique_values)
+
+x_length = np.arange(len(df['Education'].unique()))
+df_grouped = df.groupby('Education').count()
+education_values = []
+for index, row in df_grouped.iterrows():
+        education_values.append(row['Age'])
+plt.bar(x_length, education_values)
+plt.xticks(x_length, )
+plt.show()
