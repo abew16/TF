@@ -83,13 +83,22 @@ sorted_education = sorted(education_dictionary.items(), key=operator.itemgetter(
 
 # Create bar chart for Education
 x_length = range(len(sorted_education))
+
+## What does this * do below????
 education_values = zip(*sorted_education)[1]
-print (education_values)
-education_names = zip(sorted_education)[0]
-# plt.bar(x_length, education_values, width=.35, align='center')
-# plt.xticks(x_length, education_names, rotation=45, fontsize='small')
-# plt.savefig('C:\Users\Abe\Google Drive\Python\Data_Science\Charts\Prep_Capstone\Education Bar Chart.png')
-# plt.show()
+education_names = zip(*sorted_education)[0]
+plt.figure(figsize=(7, 7))
+plt.bar(x_length, education_values, width=.35, align='center')
+plt.xticks(x_length, education_names, rotation=45, fontsize='small')
+plt.ylabel('Amount / Education Level')
+plt.tight_layout()
+plt.savefig('C:\Users\Abe\Google Drive\Python\Data_Science\Charts\Prep_Capstone\Education Bar Chart.png')
+plt.show()
+
+raw_input('\nAs a Pie Chart:')
+plt.pie(education_values, labels=education_names, autopct='%1.1f%%')
+plt.savefig('C:\Users\Abe\Google Drive\Python\Data_Science\Charts\Prep_Capstone\Education Pie Chart.png')
+plt.show()
 
 raw_input('\nENTER')
 df_filtered = df[df['Income']=='>50K']
