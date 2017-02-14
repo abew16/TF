@@ -23,35 +23,49 @@ for col in df.columns:
 ## Show a Distrubtion of values for Age
 raw_input('\nDistrubtion of Age:')
 cols = ['Age']
-percentiles = [.1,.2,.25,.3,.4,.5,.6,.7,.75,.8,.9]
-print (df[cols].describe(percentiles=percentiles))
+print (df[cols].describe())
 
 raw_input('\nBox Plot:')
 plt.boxplot(df['Age'])
 plt.ylabel('Age')
 plt.yticks([10,20,30,40,50,60,70,80,90,100],[10,20,30,40,50,60,70,80,90,100])
 plt.ylim((0,100))
-plt.show()
+plt.savefig('Age Box Plot.png')
+# plt.show()
 
 raw_input('\nEducation Levels:')
-
 ## Create buckets for people who didn't go to HS or dropped out
 no_hs = ['1st-4th', '5th-6th', '7th-8th', 'Preschool']
 hs_drop_out = ['9th', '10th', '11th', '12th']
+masters = ['Masters', 'Prof-school']
+associate = ['Assoc-acdm', 'Assoc-voc']
 df = df.replace(no_hs, 'No-HS')
 df = df.replace(hs_drop_out, 'HS-DropOut')
+df = df.replace(associate, 'Associate')
 
 ## Check buckets and view unique values for Education
+education_names = []
 for col in df.columns:
     if col == 'Education':
         unique_values = sorted(df[col].unique())
+        education_names.append(unique_values)
         print('Education : {}').format(unique_values)
 
+## Create bar chart for Education
 x_length = np.arange(len(df['Education'].unique()))
 df_grouped = df.groupby('Education').count()
 education_values = []
 for index, row in df_grouped.iterrows():
         education_values.append(row['Age'])
-plt.bar(x_length, education_values)
-plt.xticks(x_length, )
-plt.show()
+plt.bar(x_length, education_values, width=.35, align='center')
+plt.xticks(x_length, education_names[0], rotation=45, fontsize='small')
+plt.savefig('Education Bar Chart.png')
+# plt.show()
+
+raw_input('\nENTER')
+df_filtered = df[df['Income']=='>50K']
+df__grouped = df_filtered.groupby('Education').count()
+df_percentages = df__grouped / df_grouped
+
+
+
