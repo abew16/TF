@@ -37,7 +37,6 @@ raw_input('\nEducation Levels:')
 ## Create buckets for people who didn't go to HS or dropped out
 no_hs = ['1st-4th', '5th-6th', '7th-8th', 'Preschool']
 hs_drop_out = ['9th', '10th', '11th', '12th']
-masters = ['Masters', 'Prof-school']
 associate = ['Assoc-acdm', 'Assoc-voc']
 df = df.replace(no_hs, 'No-HS')
 df = df.replace(hs_drop_out, 'HS-DropOut')
