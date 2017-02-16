@@ -1,0 +1,46 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+import operator
+from pyvttbl import anova1way
+
+adult = '/home/abew16/python practice/Data_Sets/adult.csv'
+# adult_local = 'C:\Users\Abe\Google Drive\Python\Data_Science\Data_Sets\Adult.csv'
+df = pd.read_csv(adult)
+
+## capitalize headers for legibility
+df.index.name = 'Index'
+df.columns = [col.capitalize() for col in df.columns]
+
+## Create sample from data set
+input('\nCreate Sample Data Frame')
+df_400 = df.sample(n=400)
+df_400.to_csv('/home/abew16/python practice/Data_Sets/Adult_Trimmed.csv')
+usecols = df.columns
+df_400 = pd.read_csv('/home/abew16/python practice/Data_Sets/Adult_Trimmed.csv', usecols=usecols)
+print (df_400.head())
+#print ('There are {} rows now').format(df_400.shape[0])
+
+## Create buckets for people who didn't go to HS or dropped out
+no_hs = ['1st-4th', '5th-6th', '7th-8th', 'Preschool']
+hs_drop_out = ['9th', '10th', '11th', '12th']
+associate = ['Assoc-acdm', 'Assoc-voc']
+df_400 = df_400.replace(no_hs, 'No-HS')
+df_400 = df_400.replace(hs_drop_out, 'HS-DropOut')
+df_400 = df_400.replace(associate, 'Associate')
+
+input('\nENTER:')
+income_list = df_400['Income']
+income_list = [1 if x == '>50K' else 0 for x in income_list]
+df_400['Income_Value'] = income_list
+df_grouped = df_400.groupby('Education').mean()
+df_bachelor_education = df_400.ix[lambda df: df_400['Education']=='Bachelors','Income_Value']
+df_bachelor_mean = np.mean(df_bachelor_education)
+# print (np.std(df_bachelor_education))
+print (stats.ttest_1samp(df_bachelor_education, df_bachelor_mean))
+print (stats.ttest_1samp(df_bachelor_education, .75))
+
+input('\nANOVA')
+df_400_pvyt = pt.DataFrame(df_400)
+print (df_400_pvyt.anova1way('Income_Value','Education'))
