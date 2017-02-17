@@ -16,7 +16,7 @@ df.columns = [col.capitalize() for col in df.columns]
 
 ## Create sample from data set
 input('\nCreate Sample Data Frame')
-df_400 = df.sample(n=400)
+df_400 = df.sample(n=1000)
 df_400.to_csv('/home/abew16/python practice/Data_Sets/Adult_Trimmed.csv')
 usecols = df.columns
 df_400 = pd.read_csv('/home/abew16/python practice/Data_Sets/Adult_Trimmed.csv', usecols=usecols)
@@ -72,12 +72,16 @@ df_grouped = df_grouped.sort_values('Income_Value', ascending=False)['Income_Val
 print (df_grouped)
 
 ## Print the value of all the hypothesis tests
-input('\nHypothesis Tests:')
+input('\nHypothesis Tests: >50 Percent Chance')
 df_education_values = pd.DataFrame()
 education_names = df_grouped.index.values
 for education in education_names:
     df_education = list(df_400.ix[lambda df: df_400['Education']==education,'Income_Value'])
-    print ('{}: T-Stat:{}, P-Value:{}'.format(education, list(stats.ttest_1samp(df_education, .5))[0], list(stats.ttest_1samp(df_education, .5))[1]))
+    print ('{}: {} people in sample'.format(education, len(df_education)))
+    print ('T-Stat:{}, P-Value:{}\n'.format(list(stats.ttest_1samp(df_education, .5))[0], (list(stats.ttest_1samp(df_education, .5))[1])/2))
+
+
+
 
 # input('\nANOVA')
 # df_400_pvyt = pt.DataFrame(df_400)
