@@ -44,6 +44,8 @@ Outline the steps used to get to your findings
 
 ###Findings:
 
+https://cloud.githubusercontent.com/assets/25283369/23105738/ad426f24-f698-11e6-8fc8-8c5f10f8bff6.png
+
 	- post images
 	- post data metrics
 	- post terminal screens    
