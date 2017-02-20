@@ -5,7 +5,7 @@ This Repository contains all drills relating to the TF Prep Course.
 Author:
 
 ##Prep Capstone Project
-This project is intended to explore the concepts of data science and is a preliminary to the complete Capstone project for Thinkful Data Science Bootcamp
+This project is intended to explore the concepts of data science and is a preliminary Capstone for the Thinkful Data Science Bootcamp
 
 ###Data Science Concepts:
 Investigated and explored the topics of hypothesis testing and data visualization as well as deepening my knowledge of Python.  
@@ -39,15 +39,14 @@ My goal is to show what level of education someone must have in order to have a 
 
 
 ###Procedures:
-Initially, I use a bar and pie chart to show the amounts of the sample per education level. From there I will use t-tests from Scipy to evaluate if we should accept that a certain education level will give you a 50% chance of having an income above 50K. I used a random sample of 1000 people from the data set.
+To begin, I use a bar and pie chart to show the amounts in the sample per education level. From there I will use t-tests from Scipy to evaluate if we should accept that a certain education level will give you a 50% chance of having an income above 50K. I used a random sample of 1000 people from the data set.
 
 ###Findings:
-
-
-
-
+The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees. 
 
 ![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
+
+There is a clear difference in the income levels of each education group. The trend below shows that those with more years of schooling have better chance of having a higher income.
 
 ![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG)
 
@@ -59,10 +58,20 @@ As you can see from the table below, only a doctorate or professional degree has
 
 
 ###Issues and Problems: 
-The issues and problems that occurred are that initially I built and tested the program on my local machine which runs Windows 10 with the intention of moving it to Unix. SciPy is not available for Windows so the program must be run on Unix in order for the hypothesis tests to work.
+Although the data set is very clean, it only has two values for income, >50K or <=50K. If the data included values for gross income as well, we could better estimate the marginal effect of education on income. 
+
+Code Issues:  
+I wanted to create an ANOVA table using the Pyvtble however the module was not working. I left the commented code in for the future:
 
 
+    import pyvttble
+        # df_400_pvyt = pt.DataFrame(df_400)
+    # print (df_400_pvyt.anova1way('Income_Value','Education'))
+    
+###Conclusion:
+What overall findings through your research did you come across and what conclusions do you have.  Post numbers and image here too for reference.
 
+According to the hypotehsis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
 
 Code Issues:  
 An example of the code issues I came across..
