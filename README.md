@@ -90,4 +90,5 @@ There were also issues running the module Pyvttbl, which is used to create the A
     }
 
 ###Conclusion:
-What overall findings through your research did you come across and what conclusions do you have.  Post numbers and image here too for reference.
+According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
+
