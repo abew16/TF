@@ -2,13 +2,14 @@
 
 This Repository contains all drills relating to the TF Prep Course.
 
-Author:
+Author: Abe Waziri
+abe.waziri@gmail.com
 
 ##Prep Capstone Project
 This project is intended to explore the concepts of data science and is a preliminary Capstone for the Thinkful Data Science Bootcamp
 
 ###Data Science Concepts:
-Investigated and explored the topics of hypothesis testing and data visualization as well as deepening my knowledge of Python.  
+Investigated and explored the topics of hypothesis testing and data visualization as well as practicing Python programming.  
 
 ###Instructions:
 file of interest(s):
@@ -33,20 +34,27 @@ Run the script:
 
 ###Proposal:
 This data set shows whether an individual either makes more or less than 50K per year and factors which may effect that (age, education, race, sex, etc…). The data is from the 2014 census.
-My goal is to show what level of education someone must have in order to have a 50% probability of having an income greater than 50K
+This project will focus on the effect of education on income. More specifically, what level of education someone must have in order to have a 50% probability of having an income greater than 50K
 
 ###Implementation techniques:
-
+Data set contains a sample of over 30,000 with 15 different attributes. I used a random sample of 1,000 to speed up the program, while keeping the data integrity. I used a bar chart & pie charts to visualize the population makeup of each education group. Finally, I used hypothesis tests to decide if a level of education gave one a better than 50% chance of having a >50K income.
 
 ###Procedures:
 To begin, I use a bar and pie chart to show the amounts in the sample per education level. From there I will use t-tests from Scipy to evaluate if we should accept that a certain education level will give you a 50% chance of having an income above 50K. I used a random sample of 1000 people from the data set.
 
 ###Findings:
-The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees. 
+The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees:
+
+High School: 343 People - 34.3%
+Some College: 224 People - 22.4%
+...
+Prof School: 12 People - 12.2%
+Doctorate: 12 People - 12.2%
+
 
 ![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
 
-There is a clear difference in the income levels of each education group. The trend below shows that those with more years of schooling have better chance of having a higher income.
+The table below shows the percentage of each group with an income >50K. The trend shows that those with more years of schooling have better chance of having a higher income.
 
 ![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG)
 
@@ -63,10 +71,16 @@ Although the data set is very clean, it only has two values for income, >50K or 
 Code Issues:  
 I wanted to create an ANOVA table using the Pyvtble however the module was not working. I left the commented code in for the future:
 
-
     import pyvttble
         # df_400_pvyt = pt.DataFrame(df_400)
     # print (df_400_pvyt.anova1way('Income_Value','Education'))
     
 ###Conclusion:
-According to the hypotehsis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
+According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
+
+###Further Study:
+How has the effect of education on income changed over time? The ratio of people with a bachelor's degree has increased dramatically over the past half century. Quantifying this effect can help prospective students gain a better understanding about the ROI on their education and potentially make better decisions after graduating high school.
+
+
+
+
