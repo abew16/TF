@@ -79,15 +79,10 @@ An example of the code issues I came across..
 
 There were also issues running the module Pyvttbl, which is used to create the ANOVA table. The code is still in the program commented out for the future.
 
-    "firstName": {
-        ".validate":"newData.isString()"
-    },
-    "lastName": {
-        ".validate":"newData.isString()"
-    },
-    "phoneNumber": {
-        ".validate":"newData.isString() && newData.val().length == 11"
-    }
+     import pyvttble
+        # df_400_pvyt = pt.DataFrame(df_400)
+    # print (df_400_pvyt.anova1way('Income_Value','Education'))
+
 
 ###Conclusion:
 According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
