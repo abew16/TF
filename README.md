@@ -18,7 +18,10 @@ file of interest(s):
 
 Installation:
 
-	>>>npm ..
+	>>>sudo pip3 install numpy
+	>>>sudo pip3 install scipy
+	>>>sudo apt-get install python3-matplotlib
+	>>>sudo 
 
 Run the script:
 	
@@ -51,16 +54,18 @@ Some College: 224 People - 22.4%
 Prof School: 12 People - 12.2%
 Doctorate: 12 People - 12.2%
 
-
 ![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
 
-The table below shows the percentage of each group with an income >50K. The trend shows that those with more years of schooling have better chance of having a higher income.
+
+
+The table below shows the percentage of each group with an income >50K. The trend shows that those with more years of schooling have better chance of having a higher income:
 
 ![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG)
 
-In order to reject the null hypothesis for the alternative (>50% chance to have a >50K income) the t-test must be positive and the P-Value must be below .1 at a 10% significance level.
 
-As you can see from the table below, only a doctorate or professional degree has enough evidence to show that there is a greater than 50% chance to have a 50K income. 
+
+
+In order to reject the null hypothesis for the alternative (>50% chance to have a >50K income) the t-test must be positive and the P-Value must be below .1 at a 10% significance level. As you can see from the table below, only a doctorate or professional degree has enough evidence to show that there is a greater than 50% chance to have a 50K income. 
 
 ![Hypothesis Tests](https://cloud.githubusercontent.com/assets/25283369/23105877/859670fe-f69a-11e6-9984-55edbb4bd533.PNG)
 
@@ -76,10 +81,16 @@ I wanted to create an ANOVA table using the Pyvtble however the module was not w
     # print (df_400_pvyt.anova1way('Income_Value','Education'))
     
 ###Conclusion:
-According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
+According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. That being said, in general someone with a higher level of education has a greater chance of having a higher income. 
+
+Although the data shows this correlation, it does not definitely prove that education causes a higher income. Students who go on to have more education could be more intrinsically motivated and might be able to earn a higher income regardless. 
 
 ###Further Study:
-How has the effect of education on income changed over time? The ratio of people with a bachelor's degree has increased dramatically over the past half century. Quantifying this effect can help prospective students gain a better understanding about the ROI on their education and potentially make better decisions after graduating high school.
+How has the effect of education on income changed over time? The ratio of people with a bachelor's degree has increased dramatically over the past half century. Using the same data in this set from differnet years can give us an understanding of how the value of  degree has changed over time. 
+
+Education is correlated with other factors in this data set, especially age. In the future it would be useful to de-correlate these variables and identify each effect individually.
+
+What is the marginal effect of education on income? If we had the gross income's of each person in the sample, we could calculate the marginal effect of education on income. Calculating this effect can help prospective students gain a better understanding about the ROI on their education. 
 
 
 
