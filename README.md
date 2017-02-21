@@ -21,7 +21,7 @@ Installation:
 	>>>sudo pip3 install numpy
 	>>>sudo pip3 install scipy
 	>>>sudo apt-get install python3-matplotlib
-	>>>sudo 
+	>>>pip3 install pandas
 
 Run the script:
 	
