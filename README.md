@@ -69,21 +69,4 @@ I wanted to create an ANOVA table using the Pyvtble however the module was not w
     # print (df_400_pvyt.anova1way('Income_Value','Education'))
     
 ###Conclusion:
-What overall findings through your research did you come across and what conclusions do you have.  Post numbers and image here too for reference.
-
 According to the hypotehsis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
-
-Code Issues:  
-An example of the code issues I came across..
-
-
-There were also issues running the module Pyvttbl, which is used to create the ANOVA table. The code is still in the program commented out for the future.
-
-     import pyvttble
-        # df_400_pvyt = pt.DataFrame(df_400)
-    # print (df_400_pvyt.anova1way('Income_Value','Education'))
-
-
-###Conclusion:
-According to the hypothesis test, only a doctorate and a professional degree increase one's chance of having an income above 50K over 50%. 
-
