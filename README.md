@@ -81,6 +81,10 @@ The table below shows the percentage of each group with an income >50K. The tren
 
 
 
+Hyopthesis Tests:
+There are two important values in this table: The T value and the P value. The t value measures the difference between the observed mean and the hypothesized mean. If the t value is large, then we are more likely to accept the alternate hypothesis. The p value shows how likely it is to see a more extreme mean in the direction of the alternate hypothesis assuming that the originall hypothesis is true. If the p value is small, then we are more likely to reject the original hypothesis for the alternative. The final call whether or not we should reject or accept the orignal hypothesis is set from the alpha level, also called the significance level. The higher the significance level, the stronger we need the evidence to be in order to reject our original hypothesis.
+
+
 In order to reject the null hypothesis for the alternative (>50% chance to have a >50K income) the t-test must be positive and the P-Value must be below .1 at a 10% significance level. As you can see from the table below, only a doctorate or professional degree has enough evidence to show that there is a greater than 50% chance to have a 50K income. 
 
 ![Hypothesis Tests](https://cloud.githubusercontent.com/assets/25283369/23105877/859670fe-f69a-11e6-9984-55edbb4bd533.PNG)
