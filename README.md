@@ -1,15 +1,18 @@
-# TF
+	# TF
 
 This Repository contains all drills relating to the TF Prep Course.
 
-Author: Abe Waziri
-abe.waziri@gmail.com
+**Contributors:**
+
+* Author: [Abe Waziri]
+
+* Reviewer:  [William Hoang]
 
 ##Prep Capstone Project
 This project is intended to explore the concepts of data science and is a preliminary Capstone for the Thinkful Data Science Bootcamp
 
 ###Data Science Concepts:
-Investigated and explored the topics of hypothesis testing and data visualization as well as practicing Python programming.  
+The intent is to investigate and explore the topics of hypothesis testing and data visualization on a data set through the practice of Python programming.  
 
 ###Instructions:
 file of interest(s):
@@ -36,43 +39,48 @@ Run the script:
 	- matplotlib 1.5.1
 
 ###Proposal:
-This data set shows whether an individual either makes more or less than 50K per year and factors which may effect that (age, education, race, sex, etc…). The data is from the 2014 census.
-This project will focus on the effect of education on income. More specifically, what level of education someone must have in order to have a 50% probability of having an income greater than 50K
+The data set in experiment shows whether an individual makes either more or less than $50K (USD) per year and factors in which attributes may effect that question.  The attributes considered are: age, education, race, sex, etc… 
+
+The data is from the [2014 US census].  This project will focus on the effect of the level of education has on income. More specifically, what level of education the individual must have in order to have a 50% probability of having an income greater than $50K
 
 ###Implementation techniques:
-Data set contains a sample of over 30,000 with 15 different attributes. I used a random sample of 1,000 to speed up the program, while keeping the data integrity. I used a bar chart & pie charts to visualize the population makeup of each education group. Finally, I used hypothesis tests to decide if a level of education gave one a better than 50% chance of having a >50K income.
+The data set contains a sample of over 30,000 entries with 15 different attributes. I used a random sample of 1,000 of those entries to speed up the program analysis while keeping the data integrity. I used a bar chart & pie charts to visualize the population makeup of each education group. Finally, I used hypothesis tests to decide if a particular level of education resulted in a better than 50% chance of having an income greater than $50K.
 
 ###Procedures:
-1. Reduce data set from 32,560 to 1,000
-2. Consolidate certain education values into buckets for better readability
-  a. No-HS, HS-Drop Out Associate
+1. Reduce data set from 32,560 entries to 1,000 entries
+2. Consolidate certain education values into buckets for better readability:
+	- No-HS
+	- HS-Drop Out 
+	- Associate
 3. List education values
-4. Create dictionary with education value as key and amount per category as value
-5. Use the dictionary to create a bar and pie chart
-6. Create binary column in data frame with a value of 1 if >50K is true and 0 if false
+4. Create python dictionary with education value as key and amount per category as value
+5. Use the dictionary to create bar and pie chart represenations
+6. Create binary column in data frame with a value of 1 if greater than >50K is true and 0 if false
 7. Present the mean of that column grouped by education value 
 8. Run a hypothesis test for each value of education
 
 ###Findings:
 The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees:
 
+ - **High School:** 343 People - 34.3%
 
-High School: 343 People - 34.3%
+ - **Some College:** 224 People - 22.4%
+ 
+ ...
+ 
+ ..
+ 
 
-Some College: 224 People - 22.4%
+ - **Prof School:** 12 People - 12.2%
 
-...
-
-Prof School: 12 People - 12.2%
-
-Doctorate: 12 People - 12.2%
+ - **Doctorate:** 12 People - 12.2%
 
 
 ![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
 
 
 
-The table below shows the percentage of each group with an income >50K. The trend shows that those with more years of schooling have better chance of having a higher income:
+The table below shows the percentage of each group with an income greater than $50K. The trend shows that those with more years of schooling have better chance of having a higher income:
 
 
 
@@ -81,7 +89,8 @@ The table below shows the percentage of each group with an income >50K. The tren
 
 
 
-Hyopthesis Tests:
+**Hyopthesis Tests:**
+
 There are two important values in this table: The T value and the P value. The t value measures the difference between the observed mean and the hypothesized mean. If the t value is large, then we are more likely to accept the alternate hypothesis. The p value shows how likely it is to see a more extreme mean in the direction of the alternate hypothesis assuming that the originall hypothesis is true. If the p value is small, then we are more likely to reject the original hypothesis for the alternative. The final call whether or not we should reject or accept the orignal hypothesis is set from the alpha level, also called the significance level. The higher the significance level, the stronger we need the evidence to be in order to reject our original hypothesis.
 
 
@@ -96,7 +105,7 @@ One recurring issue I had was dealing with the index column in the pandas data f
 Another issue I spent some time dealing with was matching the values in my charts to its correct label. I tackled this by creating two lists from a grouped data frame and zipping them together into a dictionary. 
 
 
-Code Issues:  
+**Code Issues:**  
 I wanted to create an ANOVA table using the Pyvtble however the module was not working. I left the commented code in for the future:
 
     import pyvttble
@@ -116,5 +125,9 @@ Education is correlated with other factors in this data set, especially age. In 
 What is the marginal effect of education on income? If we had the gross income's of each person in the sample, we could calculate the marginal effect of education on income. Calculating this effect can help prospective students gain a better understanding about the ROI on their education. 
 
 
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.) 
 
 
+   [William Hoang]: <https://github.com/WilliamHoang>
+   [Abe Waziri]: <https://github.com/abew16>
+   [2014 US census]:  <https://www.census.gov/population/projections/data/national/2014.html>
