@@ -76,7 +76,7 @@ The majority of the sample were high school graduates and graduates with some co
  - **Doctorate:** 12 People - 12.2%
 
 
-![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png "Sample Size Per Education")
+![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png "Sample Size Per Education Category")
 
 
 
