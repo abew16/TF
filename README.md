@@ -76,7 +76,7 @@ The majority of the sample were high school graduates and graduates with some co
  - **Doctorate:** 12 People - 12.2%
 
 
-![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
+![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png "Sample Size Per Education")
 
 
 
@@ -84,7 +84,7 @@ The table below shows the percentage of each group with an income greater than $
 
 
 
-![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG)
+![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG "Percentage of Sample >50K Income")
 
 
 
@@ -96,7 +96,7 @@ There are two important values in this table: The T value and the P value. The t
 
 In order to reject the null hypothesis for the alternative (>50% chance to have a >50K income) the t-test must be positive and the P-Value must be below .1 at a 10% significance level. As you can see from the table below, only a doctorate or professional degree has enough evidence to show that there is a greater than 50% chance to have a 50K income. 
 
-![Hypothesis Tests](https://cloud.githubusercontent.com/assets/25283369/23105877/859670fe-f69a-11e6-9984-55edbb4bd533.PNG)
+![Hypothesis Tests](https://cloud.githubusercontent.com/assets/25283369/23105877/859670fe-f69a-11e6-9984-55edbb4bd533.PNG "Hypothesis Tests")
 
 
 ###Issues and Problems: 
