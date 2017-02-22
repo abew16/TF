@@ -58,16 +58,23 @@ The majority of the sample were high school graduates and graduates with some co
 
 
 High School: 343 People - 34.3%
+
 Some College: 224 People - 22.4%
+
 ...
+
 Prof School: 12 People - 12.2%
+
 Doctorate: 12 People - 12.2%
+
 
 ![education charts](https://cloud.githubusercontent.com/assets/25283369/23106278/a8484f6e-f69f-11e6-9cc4-9985468b0b82.png)
 
 
 
 The table below shows the percentage of each group with an income >50K. The trend shows that those with more years of schooling have better chance of having a higher income:
+
+
 
 ![Percentage of Sample >50K Income](https://cloud.githubusercontent.com/assets/25283369/23105880/884b7ff6-f69a-11e6-8bcc-b6b8369ffbee.PNG)
 
