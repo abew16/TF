@@ -43,10 +43,19 @@ This project will focus on the effect of education on income. More specifically,
 Data set contains a sample of over 30,000 with 15 different attributes. I used a random sample of 1,000 to speed up the program, while keeping the data integrity. I used a bar chart & pie charts to visualize the population makeup of each education group. Finally, I used hypothesis tests to decide if a level of education gave one a better than 50% chance of having a >50K income.
 
 ###Procedures:
-To begin, I use a bar and pie chart to show the amounts in the sample per education level. From there I will use t-tests from Scipy to evaluate if we should accept that a certain education level will give you a 50% chance of having an income above 50K. I used a random sample of 1000 people from the data set.
+1. Reduce data set from 32,560 to 1,000
+2. Consolidate certain education values into buckets for better readability
+  a. No-HS, HS-Drop Out Associate
+3. List education values
+4. Create dictionary with education value as key and amount per category as value
+5. Use the dictionary to create a bar and pie chart
+6. Create binary column in data frame with a value of 1 if >50K is true and 0 if false
+7. Present the mean of that column grouped by education value 
+8. Run a hypothesis test for each value of education
 
 ###Findings:
 The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees:
+
 
 High School: 343 People - 34.3%
 Some College: 224 People - 22.4%
