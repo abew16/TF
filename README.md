@@ -87,7 +87,10 @@ In order to reject the null hypothesis for the alternative (>50% chance to have 
 
 
 ###Issues and Problems: 
-Although the data set is very clean, it only has two values for income, >50K or <=50K. If the data included values for gross income as well, we could better estimate the marginal effect of education on income. 
+One recurring issue I had was dealing with the index column in the pandas data frame. When I created a random sample, the index column did not reindex to match the new sample. Instead, the index number from the original data frame stayed with its row. Instead of starting at 1 and going to 1000, the sample index was random. I circumvented this by exporting the data frame as a csv and then importing it without that index column
+
+Another issue I spent some time dealing with was matching the values in my charts to its correct label. I tackled this by creating two lists from a grouped data frame and zipping them together into a dictionary. 
+
 
 Code Issues:  
 I wanted to create an ANOVA table using the Pyvtble however the module was not working. I left the commented code in for the future:
