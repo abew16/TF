@@ -41,7 +41,7 @@ Run the script:
 ###Proposal:
 The data set in experiment shows whether an individual makes either more or less than $50K (USD) per year and factors in which attributes may effect that question.  The attributes considered are: age, education, race, sex, etc… 
 
-The data is from the [2014 US census].  This project will focus on the effect of the level of education has on income. More specifically, what level of education the individual must have in order to have a 50% probability of having an income greater than $50K
+The data is from the [1994 US census].  This project will focus on the effect of the level of education has on income. More specifically, what level of education the individual must have in order to have a 50% probability of having an income greater than $50K
 
 ###Implementation techniques:
 The data set contains a sample of over 30,000 entries with 15 different attributes. I used a random sample of 1,000 of those entries to speed up the program analysis while keeping the data integrity. I used a bar chart & pie charts to visualize the population makeup of each education group. Finally, I used hypothesis tests to decide if a particular level of education resulted in a better than 50% chance of having an income greater than $50K.
@@ -130,4 +130,4 @@ What is the marginal effect of education on income? If we had the gross income's
 
    [William Hoang]: <https://github.com/WilliamHoang>
    [Abe Waziri]: <https://github.com/abew16>
-   [2014 US census]:  <https://www.census.gov/population/projections/data/national/2014.html>
+   [1994 US census]:  <https://www.kaggle.com/uciml/adult-census-income/downloads/adult.csv.zip>
