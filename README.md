@@ -49,15 +49,14 @@ The data set contains a sample of over 30,000 entries with 15 different attribut
 ###Procedures:
 1. Reduce data set from 32,560 entries to 1,000 entries
 2. Consolidate certain education values into buckets for better readability:
-	- No-HS
-	- HS-Drop Out 
-	- Associate
-3. List education values
-4. Create python dictionary with education value as key and amount per category as value
-5. Use the dictionary to create bar and pie chart represenations
-6. Create binary column in data frame with a value of 1 if greater than >50K is true and 0 if false
-7. Present the mean of that column grouped by education value 
-8. Run a hypothesis test for each value of education
+	- No-HS = ['1st-4th', '5th-6th', '7th-8th', 'Preschool']
+	- HS-Drop Out = ['9th', '10th', '11th', '12th']
+	- Associate = ['Assoc-acdm', 'Assoc-voc']
+3. Create python dictionary with education value as key and amount per category as value
+4. Use the dictionary to create sorted bar and pie chart represenations
+5. Create binary column in data frame with a value of 1 if greater than >50K is true and 0 if false
+6. Present the mean of that column grouped by education value 
+7. Run a hypothesis test for each value of education
 
 ###Findings:
 The majority of the sample were high school graduates and graduates with some college education. The smallest groups were those with doctorates and professional degrees:
