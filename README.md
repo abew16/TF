@@ -12,7 +12,7 @@ This Repository contains all drills relating to the TF Prep Course.
 This project is intended to explore the concepts of data science and is a preliminary Capstone for the Thinkful Data Science Bootcamp
 
 ###Data Science Concepts:
-The intent is to investigate and explore the topics of hypothesis testing and data visualization on a data set through the practice of Python programming.  
+To try and implement the topics of hypothesis testing and data visualization on a data set while practicing programming in Python.  
 
 ###Instructions:
 file of interest(s):
